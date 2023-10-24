@@ -41,8 +41,20 @@ public class MiniHW3 {
         //using Shuffle method in order to get random data from the array
         Collections.shuffle(allData, new Random());
         
+        int teamSize = 5; //number of people in each team
+        int TotalTeams = 20; //as I have 100 data, in the end 20 teams will be created
         
+        List<List<String>> teams = new ArrayList<>(); //Creating a new array list to stored the data
         
+        //Looping the process
+        for (int i=0;i<allData.size();i++){
+            List<String> singleTeam = new ArrayList<>(); //creating array for a single team
+            for (int k=0; k<teamSize; k++){
+                String person = allData.remove(0);
+                singleTeam.add(person);
+            }
+            teams.add(singleTeam);
+        }
         
         
     }
