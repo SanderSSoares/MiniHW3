@@ -9,7 +9,9 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 /**
  *
@@ -35,6 +37,9 @@ public class MiniHW3 {
             allData.add(line);//add the line read to the list
             line = br.readLine();//go forward and read the next line
         }
+        
+        //using Shuffle method in order to get random data from the array
+        Collections.shuffle(allData, new Random());
         
         
         
