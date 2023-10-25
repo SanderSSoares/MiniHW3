@@ -18,7 +18,8 @@ import java.util.Random;
  * @author sande
  */
 public class MiniHW3 {
-
+    
+//GIT HUB LINK -> https://github.com/SanderSSoares/MiniHW3
     /**
      * @param args the command line arguments
      */
@@ -38,9 +39,7 @@ public class MiniHW3 {
             allData.add(line);//add the line read to the list
             line = br.readLine();//go forward and read the next line
         }
-        
-        br.close();//Stopping read of file
-        
+
         //using Shuffle method in order to get random data from the array
         Collections.shuffle(allData, new Random());
         
@@ -53,9 +52,6 @@ public class MiniHW3 {
         for (int i=0;i<totalTeams;i++){
             List<String> singleTeam = new ArrayList<>(); //creating array for a single team
             for (int k=0; k<teamSize; k++){//Loop to add members to the single team
-                if (allData.isEmpty()){
-                    break;// When the data has finished
-                }
                 String person = allData.remove(0);//to remove and add a person to the team
                 singleTeam.add(person);//adding the person to the current team
             }
@@ -63,8 +59,7 @@ public class MiniHW3 {
         }
         
         //Now printing the teams
-        //Looping the process
-        
+        //Looping the process     
         for(int i=0; i<teams.size();i++){
             
             System.out.println("Team " + (i+1) + ":");//Printinh the team number. Team 1, Team 2, so on
